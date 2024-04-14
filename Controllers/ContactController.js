@@ -11,7 +11,7 @@ export const getContact = async(req,res)=>{
 export const getContactId = async(req,res)=>{
     try {
     const {id} = req.params;
-    const contact = await ContactModel.findById(id);
+    const contact = await ContactModel.findById(id,{_id : 1,name : 1,email : 1,phone : 1,address : 1,image : 1,createdAt : 1,updatedAt : 1});
     res.status(200).json(contact)
     } catch (error) {
     res.status(500).json({message : error.message});

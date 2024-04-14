@@ -13,17 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended : false}))
 app.use(cors())
 
-// app.get("/api/contact",getContact);
-
-// app.get("/api/contact/:id",getContactId);
-
-// app.post("/api/contact",postContact);
-
-// app.put("/api/contact/:id",putContactId);
-
-// app.delete("/api/contact/:id",deleteContactId);
-
-app.use('/api/contact',ContactRouter)
+app.use("/api/contact",ContactRouter);
 
 app.use('/',(req,res)=>{
     res.json({message : `Welcome from NodeJs Server Api`});

@@ -3,14 +3,14 @@ import {deleteContactId, getContact, getContactId, postContact, putContactId}  f
 
 const router = express.Router();
 
-router.get("/api/contact",getContact);
+router.get("/",getContact);
 
-router.get("/api/contact/:id",getContactId);
+router.get("/:id",getContactId);
 
-router.post("/api/contact",postContact);
+router.post("/",postContact);
 
-router.put("/api/contact/:id",putContactId);
+router.put("/:id",putContactId);
 
-router.delete("/api/contact/:id",deleteContactId);
+router.delete("/:id",deleteContactId);
 
 export default router;
